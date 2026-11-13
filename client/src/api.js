@@ -1,6 +1,6 @@
 // This file handles all communication with our Node backend
 
-const API_BASE_URL = "http://localhost:5000"
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 // This function sends a question to the backend and returns the answer
 async function askQuestion(question, sessionId) {
