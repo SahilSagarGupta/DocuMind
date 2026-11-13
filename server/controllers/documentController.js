@@ -7,7 +7,7 @@ const path = require("path");
 const axios = require("axios");
 
 // The URL where our Python AI service is running
-const AI_SERVICE_URL = "http://127.0.0.1:8000";
+const AI_SERVICE_URL = process.env.AI_SERVICE_URL || "http://127.0.0.1:8000";
 
 // This function handles a file being uploaded into a chat
 async function uploadDocument(req, res) {
