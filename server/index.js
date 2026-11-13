@@ -10,7 +10,7 @@ const authRoutes = require("./routes/authRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 
 const app = express();
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // This lets Express understand JSON data sent in requests
 app.use(express.json());
