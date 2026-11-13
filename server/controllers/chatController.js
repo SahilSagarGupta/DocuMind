@@ -3,7 +3,7 @@ const axios = require("axios");
 const ChatSession = require("../models/ChatSession");
 const Message = require("../models/Message");
 
-const AI_SERVICE_URL = "http://127.0.0.1:8000";
+const AI_SERVICE_URL = process.env.AI_SERVICE_URL || "http://127.0.0.1:8000";
 const Document = require("../models/Document");
 const path = require("path");
 const { removeDocumentData } = require("./documentController");
